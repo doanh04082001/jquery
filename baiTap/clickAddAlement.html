@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+    <title>Thêm và xóa thẻ</title>
+  </head>
+  <body>
+    <ul id="list">
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+      <li>item 6</li>
+      <li>item 7</li>
+    </ul>
+    <button class="add" type="button">Ấn để thêm thẻ</button>
+    <button class="remove" type="button">Ấn để xóa thẻ</button>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('button.add').click(function(){
+                var countLi = $('li').length+1;
+                var li = "<li> Item "
+                $('ul').append(li + countLi++ + "</li>")
+            })
+            $('.remove').click(function(){
+                $('ul#list>li').last().remove();
+            })
+        })
+    </script>
+  </body>
+</html>

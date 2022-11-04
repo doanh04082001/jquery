@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>click vào thì ẩn đi</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style>
+      p {
+        padding: 20px;
+        font: 20px sans-serif;
+        background: khaki;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Click on me and I'll disappear 1 .</p>
+    <p>Click on me and I'll disappear. 2 </p>
+    <p>Click on me and I'll disappear.3 </p>
+
+    <div class="divv">Click on div  1 </div>
+    <div class="divv">Click on div  2 </div>
+    <div class="divv">Click on div  3 </div>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('p').dblclick(function(){
+            $(this).hide();
+        })
+      })
+      //hàm hover
+      $(document).ready(function(){
+        $('p').hover(function(){
+            $(this).css('border', 'solid 2px red')
+        },function(){
+            $(this).css('border', 'none')
+        });
+      })
+      //hàm mouseleave()
+      $(document).ready(function(){
+        $('.divv').mouseenter(function(){
+            $(this).css('border', 'solid 3px red')
+        })
+        $('.divv').mouseleave(function(){
+            $(this).css('border', 'none')
+        })
+      })
+    </script>
+  </body>
+</html>

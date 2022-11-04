@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Học web chuẩn</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <input
+      type="checkbox"
+      id="vehicle1"
+      class="check"
+      name="vehicle1"
+      value="Bike"
+    />
+    <label for="vehicle1"> I have a bike</label><br />
+    <input
+      type="checkbox"
+      id="vehicle2"
+      class="check"
+      name="vehicle2"
+      value="Car"
+    />
+    <label for="vehicle2"> I have a car</label><br />
+    <input
+      type="checkbox"
+      id="vehicle3"
+      class="check"
+      name="vehicle3"
+      value="Boat"
+    />
+    <label for="vehicle3"> I have a boat</label><br />
+    <input type="checkbox" id="checkAll" />
+    <label for="vehicle3"> Check All</label><br />
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#checkAll").change(function () {
+          $("input:checkbox").prop("checked", $(this).prop("checked"));
+        });
+      });
+    </script>
+  </body>
+</html>

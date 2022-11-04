@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tiêu đề</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <style>
+      .list0 {
+        color: red;
+      }
+      .list1 {
+        color: blue;
+      }
+      .list2 {
+        color: yellow;
+      }
+      .list3 {
+        color: green;
+      }
+      .list4 {
+        color: gray;
+      }
+      .list5 {
+        color: pink;
+      }
+      .classOfLi{
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>list 01</li>
+      <li>list 02</li>
+      <li>list 03</li>
+      <li>list 04</li>
+      <li>list 05</li>
+      <li>list 06</li>
+    </ul>
+      
+      <input type="text" class="input" value="">
+      <button class="btn">gắn sựu kiện cho nút buuton</button>
+      <div id="content">
+        <input tabIndex="1" name="focus1" value="1" />
+        <input tabIndex="2" name="focus2" value="2" />
+        <input type="button" value="Click To Show Focus Value" id="click-me" />
+    </div>
+
+    <script>
+        console.log($("ul li:only-child")); 
+    //    $('input').click(function(){
+    //     alert($("input:focus").val());
+    //    })
+    </script>
+
+    
+    <script>
+      //c hạy khi trang đã tải hết tài nguyên
+      $(document).ready(function () {
+        $("li").each(function (index) {
+          $(this).click(function () {
+            $(this).addClass("list" + index);
+          });
+        });
+      });
+      //click buuton thì alret
+      $('.btn').click(function(){
+        alert(123);
+      })
+      //khi nhập vào input thì lấy giá trị
+      $('.input').change(function(){
+        $('.input').val();
+        console.log($('.input').val());
+      })	
+      //tìm tất cả thẻ li
+      var list = $('li');
+      //thêm class cho các thẻ li
+      $('li').addClass('classOfLi');
+    //   $("li:gt(3)")
+      console.log($("li:focus"));	
+    </script>
+  </body>
+</html>

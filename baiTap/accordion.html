@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Học web chuẩn</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      h3 {
+        margin-bottom: 10px;
+      }
+      .box {
+        border: 3px solid #eee;
+        display: none;
+        height: 100px;
+        margin-top: 5px;
+        padding: 10px;
+        width: 150px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>Title 01</h3>
+    <div class="box">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </div>
+
+    <h3>Title 02</h3>
+    <div class="box">
+      Sed porttitor turpis risus, vitae sodales neque vulputate ut.
+    </div>
+
+    <h3>Title 03</h3>
+    <div class="box">In suscipit nec velit sit amet convallis. Integer.</div>
+    <script>
+      $(document).ready(function () {
+        $("h3").click(function () {
+            //slideUp sẽ ẩn đi sau mỗi lần click
+          $('.box').slideUp(300);
+          //ở đây sẽ thực hiện bật lên
+          $(this).next('.box').slideToggle(300);
+
+        });
+      });
+    </script>
+  </body>
+</html>

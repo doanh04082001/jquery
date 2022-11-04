@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Đếm số kí tự gõ lên bàn phím</h1>
+    <input type="text" class="nhap" />
+    <p>số lượng<a id="col"></a></p>
+    <h3>Nhập và xem kết quả.</h3>
+    <p class="success"></p>
+    <script type="text/javascript">
+      $(document).ready(function (){
+        var i = 0;
+        $("input.nhap").keypress(function(){
+            $("p>a#col").html(i += 1);
+        })
+      });
+    </script>
+        <h1>Đếm số lần thả giữ 1 phím gõ lên bàn phím</h1>
+        <h1>Đếm số kí tự gõ lên bàn phím</h1>
+        <input type="text" class="tha" />
+        <p>số lượng<a id="cols"></a></p>
+        <script type="text/javascript">
+            $(document).ready(function (){
+              var i = 0;
+              $("input.tha").keyup(function(){
+                  $("p>a#cols").text(i += 1);
+              })
+            });
+          </script>
+  </body>
+</html>

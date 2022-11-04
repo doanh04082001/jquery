@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>jQuery Slide-Up and Slide-Down Effects</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+  <body>
+    <ul class="list">
+      <li>item 01</li>
+      <li>item 02</li>
+      <li>item 03</li>
+      <li>item 04</li>
+      <li>item 05</li>
+      <li>item 06</li>
+      <li>item 07</li>
+    </ul>
+    <button type="button" id="change">di chuyển khi click</button>
+    <button type="button" id="auto">Di chuyển tự động sau 1 lần click</button>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#change").click(function () {
+          var a = $("ul.list>li").last();
+          //   console.log(a);
+          $("ul.list").prepend(a);
+        });
+        $("#auto").click(function () {
+        //   var myFnc = function () {
+        //     var a = $("ul.list>li").last();
+        //     $("ul.list").prepend(a);
+        //   };
+          setInterval(function(){
+            var a = $("ul.list>li").last();
+            $("ul.list").prepend(a);
+          }, 1000);
+        });
+      });
+    </script>
+  </body>
+</html>

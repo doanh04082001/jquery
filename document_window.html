@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Executing a Function on Resize Event in jQuery</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+    p{
+        padding: 20px;
+        font: 20px sans-serif;
+        background: #f0e68c;
+    }
+    span{
+        width: 100%;
+        padding: 50px 0;
+        text-align: center;
+        font: bold 34px sans-serif;
+        background: #f0e68c;
+        position: fixed;
+        top: 50px;
+        display: none;
+    }
+    .dummy-content{
+        height: 200px;
+        font: 34px sans-serif;
+        text-align: center;
+    }
+</style>
+</head> 
+<body>
+    <p>Thu phóng màn hình để xem kich thước.</p>
+    <span>Cuộn thử mà hình</span>
+    <div class="dummy-content">Scroll the viewport.</div>
+    <div class="dummy-content">Scroll the viewport.</div>
+    <div class="dummy-content">Scroll the viewport.</div>
+    <div class="dummy-content">Scroll the viewport.</div>
+    <div class="dummy-content">Scroll the viewport.</div>    <script>
+        $(document).ready(function(){
+            $(window).resize(function() {
+                    $("p").text("Window width: " + $(window).width() + ", " + "Window height: " + $(window).height());
+            });
+            $(window).scroll(function() {
+                    $("span").show().fadeOut('slow');
+            });
+        });
+        </script>
+</body>
+</html>

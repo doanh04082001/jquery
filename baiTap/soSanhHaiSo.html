@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="numberA" value="" placeholder="Nhập số a" />
+    <input type="text" id="numberB" value="" placeholder="Nhập số b" />
+    <p id="kq"></p>
+    <script type="text/javascript">
+      //   $(document).ready(function () {
+      //     $("input").change(function () {
+      //       var a = $("#numberA").val();
+      //       var b = $("#numberB").val();
+      //       console.log(a);
+      //       console.log(b);
+      //       if (a < b) {
+      //         $("#kq").html("Số a nhỏ hơn số b");
+      //       } else if (a > b) {
+      //         $("#kq").html("Số a lớn hơn số b");
+      //       } else if ((a = b)) {
+      //         $("#kq").html("Số a = b");
+      //       }
+      //     });
+      //   });
+      //viết kiểu function
+      function soSanh(a, b) {
+        if (a < b) {
+          return "a nhỏ hơn b";
+        } else {
+          return "a lớn hơn b";
+        }
+      }
+      $("input").change(function () {
+        var one = $("#numberA").val();
+        var two = $("#numberB").val();
+        $("#kq").html(soSanh(one, two));
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang ="en">
+<head>
+<meta charset ="utf-8">
+<title>Bài thực hành GTNM-5A</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<style>
+  .gtnm {
+    border: 5px solid #7B68EE                ;
+    display: none;
+    height: 200px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 200px;
+    background-color: #FFA500;
+  }
+</style>
+</head>
+<body>
+  <button type="button" id="showhide">Mở</button>
+  <div class="gtnm">Đây là bài thực hành số 5a môn GTNM đã được ẩn đi</div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('#showhide').click(function(){           
+                $('.gtnm').toggle();
+        })
+    })
+  </script>
+</body>
+</html>

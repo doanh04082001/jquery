@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+    <style>
+      #nav li {
+        float: left;
+        position: relative;
+      }
+      #nav li a {
+        background: #09749c;
+        color: #fff;
+        display: block;
+        padding: 5px 5px;
+        text-decoration: none;
+        font-family: arial, helvetica, verdana, tahoma;
+        font-size: 11px;
+      }
+      #nav li a:hover {
+        background: #ff9c00;
+        text-decoration: none;
+      }
+      #nav {
+        height: 30px;
+        display: block;
+        padding: 10px 0;
+        width: 900px;
+        position: absolute;
+      }
+      #nav li ul {
+        background: #e1ddd3;
+        display: none;
+        width: 150px;
+        position: absolute;
+      }
+      .shadow {
+        -moz-box-shadow: 0px 3px 7px 3px #a8a8a8;
+        -webkit-box-shadow: 0px 3px 7px 3px #a8a8a8;
+        -o-box-shadow: 0px 3px 7px 3px #a8a8a8;
+        box-shadow: 0px 3px 7px 3px #a8a8a8;
+      }
+      #nav li ul li {
+        width: 100%;
+      }
+      #nav li ul > li:first-child {
+        border-top: 3px solid #ff9c00;
+      }
+      #nav li.current > a {
+        background: #ff9c00;
+      }
+      #nav li ul li ul {
+        right: -150px;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="nav">
+      <li><a href="#">Profile</a></li>
+      <li>
+        <a href="#">Services</a>
+        <ul class="child">
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Logo and Print Design</a></li>
+          <li>
+            <a href="#">Batagor Enak Neh 2</a>
+            <ul class="childchild">
+              <li><a href="#">Web Design 2</a></li>
+              <li><a href="#">Batagor Enak Neh</a></li>
+              <li><a href="#">Ngerujak juga</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Ngerujak juga</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Pengen ke Arab</a></li>
+      <li>
+        <a href="#">Beasiswa S2 Go!! Goo!!</a>
+        <ul>
+          <li><a href="#">Lokal</a></li>
+          <li><a href="#">International</a></li>
+        </ul>
+      </li>
+    </ul>
+    <script>
+      $(document).ready(function () {
+        $("#nav li").has("ul").hover(function () {
+              $(this).children("ul").slideDown(200);
+            },function () {
+              $(this).children("ul").stop(true, true).slideUp("200");
+            }
+          );
+      });
+    </script>
+  </body>
+</html>
